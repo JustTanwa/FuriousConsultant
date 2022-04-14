@@ -4,12 +4,14 @@ This is a small project website for me to learn about creating landing page and 
 
 ## Tech Stack
 
-I will be using HTML5, CSS, and JavaScript for this project.
+I will be using HTML5, CSS, JavaScript and little jQuery for this project.
 
 ### Goals
 
-I want to have a landing page with a CTA button as the landing page. As well as a couple of pages to test layout of forms and information page.
+I want to have a website with a CTA button on the landing page. As well as explore a couple of pages to test layout of forms and information page.
 
 ### Credits
 
 I will be using TMDb for the movie database information and images will be taken from Unsplash.
+- Hero image from Unsplash by Shiro Hatori
+- Image of the laughing man from Pixabay, artist unknown.
