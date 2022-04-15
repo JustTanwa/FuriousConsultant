@@ -66,7 +66,6 @@ const images = [
 ];
 const cards = document.getElementsByClassName('card');
 Array.from(cards).forEach((elem, i) => {
-	console.log(elem.firstElementChild);
 	return (elem.firstElementChild.style.backgroundImage =
 		'url(' + images[i] + ')');
 });

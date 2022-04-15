@@ -67,6 +67,26 @@ header {
     list-style-type: none;
 }
 
+.nav-link a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+.nav-link a::after {
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: #fff;
+    transition: 0.5s ease;
+}
+
+.nav-link a:hover::after {
+    width: 100%;
+}
+
 .burger-menu-container {
     display: flex;
     flex-basis: 80%;
@@ -183,11 +203,18 @@ header {
     min-width: 15ch;
     height: 3em;
     border-radius: 500px;
-    background: transparent;
+    background: #fff;
     outline: 2px solid #fff;
-    color: #fff;
+    color: #000;
     font-weight: bold;
     margin-right: 2em;
+    transition: 0.5s ease-in-out;
+}
+
+.cta-btn:hover {
+    background: #222;
+    color: white;
+    outline: #000 1px solid;
 }
 
 @media screen and (min-width: 1000px) {
@@ -326,10 +353,6 @@ header {
 .serv {
     justify-content: center;
     margin-bottom: 2em;
-}
-
-.cta-btn.dark {
-    color: #000;
 }
 
 @media screen and (min-width: 720px) {
