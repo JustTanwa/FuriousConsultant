@@ -10,6 +10,13 @@
 			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 			crossorigin="anonymous"
 		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
 		<title>Furious Consultant</title>
 	</head>
 	<body>
@@ -50,58 +57,106 @@
 				<li>Apply</li>
 			</ul>
 		</div>
-		<section class="intro">
-			<div class="intro-container">
-				<div class="headshot-container">
-					<h2 class="intro-name">
-						<pre>
+		<main class="content">
+			<section class="intro">
+				<div class="intro-container">
+					<div class="headshot-container">
+						<h2 class="intro-name">
+							<pre>
 Hi, 
 I'm 
 Dominic</pre
-						>
-					</h2>
+							>
+						</h2>
+					</div>
+					<div class="infor-text">
+						<h3 class="self-title">
+							Professional Thief with over 15+ Years of Experience
+						</h3>
+						<p class="description">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
+							cumque maiores perferendis quae minima accusantium repudiandae
+							blanditiis sunt! Doloremque odit cumque ullam qui esse tenetur
+							totam odio dolore illum incidunt?
+						</p>
+					</div>
 				</div>
-				<div class="infor-text">
-					<h3 class="self-title">
-						Professional Thief with over 15+ Years of Experience
-					</h3>
-					<p class="description">
-						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro
-						cumque maiores perferendis quae minima accusantium repudiandae
-						blanditiis sunt! Doloremque odit cumque ullam qui esse tenetur totam
-						odio dolore illum incidunt?
-					</p>
+			</section>
+			<section class="services">
+				<h3 class="services-title">Our Services</h3>
+				<div class="service-wrapper">
+					<div class="service">
+						<span class="one">01</span>
+						<p>
+							Improve your success rate with your plan to help save the world.
+						</p>
+					</div>
+					<div class="service">
+						<span class="two">02</span>
+						<p>
+							Plan and orchestrate <em>mission impossible</em> style hiests.
+						</p>
+					</div>
+					<div class="service">
+						<span class="three">03</span>
+						<p>
+							Track down and capture <em>notorious</em> rogue special forces
+							assassins.
+						</p>
+					</div>
 				</div>
-			</div>
-		</section>
-		<section class="services">
-			<h3 class="services-title">Our Services</h3>
-			<div class="service-wrapper">
-				<div class="service">
-					<span class="one">01</span>
-					<p>
-						Improve your success rate with your plan to help save the world.
-					</p>
+				<div class="button-container serv">
+					<button class="cta-btn dark">Hire us</button>
 				</div>
-				<div class="service">
-					<span class="two">02</span>
-					<p>Plan and orchestrate <em>mission impossible</em> style hiests.</p>
+			</section>
+			<section class="testimonials">
+				<h3 class="testimonial-title">What People Say</h3>
+				<div class="testimonial-wrapper">
+					<div class="testimonial-slider">
+						<button class="testimonial-btn" id="test-prev">
+							<i class="fas fa-angle-left"></i>
+						</button>
+						<div class="testimonial-card active">
+							<figure class="card">
+								<div class="image"></div>
+								<figcaption>
+									<i class="fas fa-quote-left"></i>These guys are extremely
+									professional, couldn't save the world without them!
+								</figcaption>
+							</figure>
+						</div>
+						<div class="testimonial-card">
+							<figure class="card">
+								<div class="image"></div>
+								<figcaption>
+									<i class="fas fa-quote-left"></i>I was completely lost with my
+									heist until I hired Dom and his team. Very clever plans.
+								</figcaption>
+							</figure>
+						</div>
+						<div class="testimonial-card">
+							<figure class="card">
+								<div class="image"></div>
+								<figcaption>
+									<i class="fas fa-quote-left"></i>I can't believe they were
+									unable to catch me! I'm a dangerous rogue assassin with next
+									level tech, you just can't beat the power of family.
+								</figcaption>
+							</figure>
+						</div>
+						<button class="testimonial-btn" id="test-next">
+							<i class="fas fa-angle-right"></i>
+						</button>
+					</div>
+					<!-- <div class="slider-nav">
+						<div class="item">1</div>
+						<div class="item">2</div>
+						<div class="item">3</div>
+					</div> -->
 				</div>
-				<div class="service">
-					<span class="three">03</span>
-					<p>
-						Track down and capture <em>notorious</em> rogue special forces
-						assassins.
-					</p>
-				</div>
-			</div>
-			<div class="button-container serv">
-				<button class="cta-btn dark">Hire us</button>
-			</div>
-		</section>
-		<section class="testimonial">
-			<h3 class="testimonial-title">What People Say</h3>
-		</section>
+			</section>
+		</main>
+        <footer>&copy; 2022 by Tanwa Sripan. </footer>
 		<script src="index.js"></script>
 	</body>
 </html>
