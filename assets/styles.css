@@ -56,10 +56,29 @@ header {
 
 .nav-links-container {
     display: none;
-    flex-basis: 80%;
-    gap: 2em;
-    justify-content: flex-end;
-    padding-right: 5em;
+    width:100vw;
+    height: 100vh;
+    background-color: #222;
+    position: fixed;
+    inset: 0 0 0 0;
+    transition: .5s ease-in-out;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.nav-links-container.open {
+    display: flex;
+}
+
+.link-wrapper {
+    font-size: 2em;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style-type: none;
 }
 
 .nav-link {
@@ -148,35 +167,6 @@ header {
     left: 2px;
 }
 
-.fullnav {
-    display: none;
-    width:100vw;
-    height: 100vh;
-    background-color: #222;
-    position: fixed;
-    inset: 0 0 0 0;
-    transition: .5s ease-in-out;
-    color: #fff;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.fullnav.open {
-    display: flex;
-    
-}
-
-.fullnav-links {
-    font-size: 2em;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    list-style-type: none;
-}
-
-
 .main-text {
     grid-area: cta;
     color: #fff;
@@ -224,6 +214,23 @@ header {
 
     .nav-links-container {
         display: flex;
+        position: static;
+        flex-basis: 80%;
+        padding-right: 5em;
+        width: auto;
+        height: auto;
+        background: transparent;
+    }
+
+    .link-wrapper {
+        font-size: 1em;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 2em;
+        width: 100%;
+        list-style-type: none;
     }
 
     .layout {
