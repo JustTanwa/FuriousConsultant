@@ -49,6 +49,11 @@ header {
     color: #fff;
 }
 
+.nav-placeholder {
+    grid-area: header;
+    background-color: #222;
+}
+
 .logo {
     padding-left: 5em;
     flex-basis: 20%;
