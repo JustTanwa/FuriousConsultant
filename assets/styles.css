@@ -268,12 +268,12 @@ header {
 
 .headshot-container {
     width: 80%;
-    max-width: 400px;
+    max-width: 300px;
     padding-bottom: min(400px, 80%);
     outline: 1px solid black;
-    background-image: url(/assets/img/headshot.jpg);
-    background-position: center;
-    background-size: cover;
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
     position: relative;
 }
 
@@ -292,7 +292,8 @@ header {
 @media screen and (min-width: 920px) {
 
     .headshot-container {
-        background-position: right;
+        background-position: left;
+
     }
     .intro-name {
         left: 90%;
@@ -503,6 +504,14 @@ header {
 
 #test-prev {
     left: -10px;
+}
+/*Contact details*/
+
+.contact {
+    min-height: 200px;
+    background: url('/assets/img/wave.svg');
+    background-position: bottom;
+    background-repeat: no-repeat;
 }
 
 /*Footer */

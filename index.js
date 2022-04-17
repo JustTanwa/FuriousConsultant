@@ -180,4 +180,24 @@ async function createTeam() {
 	}
 }
 
+async function getImage() {
+	const response = await fetch(
+		baseURL +
+			'/search/person?api_key=' +
+			APIKEY +
+			'&query=Vin%20Diesel&page=1&include_adult=false'
+	);
+
+	const vinDeisel = await response.json();
+	const profile = await fetch(
+		baseURL + '/person/' + vinDeisel.results[0].id + '/images?api_key=' + APIKEY
+	);
+	const profileImg = await profile.json();
+	console.log(profileImg);
+}
+const headshot = document.querySelector('.headshot-container');
+if (headshot) {
+	headshot.style.backgroundImage = `url(https://image.tmdb.org/t/p/original/dZ0aCQV3Zoudk0L3QAlBPHz5HrR.jpg)`;
+}
+
 document.addEventListener('DOMContentLoaded', createTeam);
