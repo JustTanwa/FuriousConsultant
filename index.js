@@ -128,14 +128,46 @@ async function createTeam() {
 	}
 	if (teamContainer) {
 		const membersInfo = {
-			Dominic: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Mia: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Brian: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Luke: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Leticia: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Gisele: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Han: { title: 'Crew Leader', description: 'Organise crew and hits' },
-			Roman: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Dominic: {
+				title: 'Team Leader',
+				description:
+					'Dominic is a superb racer, strong mentality, merciful fighter and the brains behind the plans.',
+			},
+			Mia: {
+				title: 'Team HR',
+				description:
+					'Mia is takes care of the whole crew, providing moral support.',
+			},
+			Brian: {
+				title: 'Co-Leader',
+				description:
+					'As an ex-cop Brian has the knowledge about law enforcement and this allow for good heist plans.',
+			},
+			Luke: {
+				title: 'Juggernaut',
+				description:
+					'Luke is an FBI agent who provides support for the Crew. He is a great leader with great combat experience and a value asset to the Crew.',
+			},
+			Leticia: {
+				title: 'Co-Leader',
+				description:
+					'Letty ride side-by-side with Dominic, she possess the skills in hand to hand combat and is a solid rider.',
+			},
+			Gisele: {
+				title: 'Marksman',
+				description:
+					'A wonderful woman who oozes confidence. She is a master of beauty and deception.',
+			},
+			Han: {
+				title: 'Drift King',
+				description:
+					'Han grew up in the streets of Tokyo where racing has shaped him to be an extremely top tier driver.',
+			},
+			Roman: {
+				title: 'Wildcard',
+				description:
+					'Roman always provide laughter to the team, a jack of all trade who is wonderful with words.',
+			},
 		};
 		teamMembers.forEach((member) =>
 			createMemberCard(

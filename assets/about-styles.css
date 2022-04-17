@@ -76,6 +76,10 @@ header {
     font-size: 0.8em;
 }
 
+.cta-btn {
+    margin: 2em 0;
+}
+
 @media screen and (min-width: 700px) {
     .team-members-container {
         flex-direction: row;
