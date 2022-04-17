@@ -75,8 +75,8 @@ if (document.querySelector('.testimonial-card')) makeCarousel();
 // getting actors images with TMDb
 let baseURL = 'https://api.themoviedb.org/3';
 
-let url = baseURL + '/search/movie?api_key=' + APIKEY + '&query=Furious+7';
-let movieId;
+let url = baseURL + '/search/movie?api_key=' + APIKEY + '&query=Fast Furious 6';
+let movieId, teamMembers;
 
 async function getMovieId(url) {
 	const response = await fetch(url);
@@ -85,15 +85,67 @@ async function getMovieId(url) {
 	return movieId;
 }
 
-async function getMovieDetails() {
+async function createTeam() {
 	const movieId = await getMovieId(url);
-	console.log(movieId);
-	console.log(baseURL + '/movie/' + movieId + '/credits?api_key=' + APIKEY);
 	const response = await fetch(
 		baseURL + '/movie/' + movieId + '/credits?api_key=' + APIKEY
 	);
 	const data = await response.json();
-	console.log(data);
+	let casts = data.cast.slice(0, 8);
+
+	teamMembers = casts.map((cast) => ({
+		fullName: cast.character,
+		imageURL: 'https://image.tmdb.org/t/p/original/' + cast.profile_path,
+		firstName: cast.character.split(' ')[0],
+	}));
+
+	// add photos and description to about me page
+
+	const teamContainer = document.querySelector('.team-members-container');
+	function createMemberCard(
+		imgURL,
+		name,
+		title = 'Title',
+		description = 'Missing'
+	) {
+		const cardElement = document.createElement('div');
+		cardElement.classList.add('team-member-card');
+		cardElement.innerHTML = `
+	<div class="member-img">
+		<figure>
+			<img
+				src="${imgURL}"
+			/>
+		<figcaption>${name}</figcaption>
+		</figure>
+	</div>
+	<span>${title}</span>
+	<p class="about-member">
+		${description}
+	</p>
+	`;
+		teamContainer.appendChild(cardElement);
+	}
+	if (teamContainer) {
+		const membersInfo = {
+			Dominic: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Mia: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Brian: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Luke: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Leticia: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Gisele: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Han: { title: 'Crew Leader', description: 'Organise crew and hits' },
+			Roman: { title: 'Crew Leader', description: 'Organise crew and hits' },
+		};
+		teamMembers.forEach((member) =>
+			createMemberCard(
+				member.imageURL,
+				member.fullName,
+				membersInfo[member.firstName].title,
+				membersInfo[member.firstName].description
+			)
+		);
+	}
 }
 
-document.addEventListener('DOMContentLoaded', getMovieDetails);
+document.addEventListener('DOMContentLoaded', createTeam);

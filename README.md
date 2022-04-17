@@ -8,7 +8,7 @@ I will be using HTML5, CSS, JavaScript and little jQuery for this project.
 
 I will also be using Font Awesome v5 for some icons.
 
-TMDb API for calling the characters in the Fast and Furious movie.
+TMDb API for calling the characters in the Fast and Furious movie. (This product uses the TMDB API but is not endorsed or certified by TMDB.)
 
 ### Goals
 
