@@ -508,10 +508,69 @@ header {
 /*Contact details*/
 
 .contact {
-    min-height: 200px;
+    min-height: 300px;
+    width: 100vw;
     background: url('/assets/img/wave.svg');
     background-position: bottom;
     background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contact-container {
+    width: 90%;
+    height: 160px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-container > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+
+.social-links {
+    display: flex;
+    gap: 1em;
+    font-size: 1.5em;
+}
+
+.contact-container a {
+    color: #222;
+    text-decoration: none;
+}
+
+.social-links a {
+    color: #fff;
+}
+
+@media screen and (min-width: 960px) {
+    .contact-container {
+        flex-basis: 60%;
+        flex-direction: row;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+    .contact-container > div {
+        justify-content: center;
+    }
+
+    .social-links a {
+        color: #222;
+    }
+    
+}
+
+@media screen and (min-width: 1300px) {
+    .contact-container {
+        flex-basis: 50%;
+    }    
 }
 
 /*Footer */
