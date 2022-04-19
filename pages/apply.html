@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../assets/styles.css" />
+		<link rel="stylesheet" href="../assets/about-styles.css" />
+		<link rel="stylesheet" href="../assets/apply-styles.css" />
+		<script
+			src="https://code.jquery.com/jquery-3.6.0.min.js"
+			integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+			crossorigin="anonymous"
+		></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+			integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Career Application</title>
+	</head>
+	<body>
+		<header>
+			<div class="logo">Logo</div>
+			<ul class="nav-links-container">
+				<div class="link-wrapper">
+					<li class="nav-link"><a href="/">HOME</a></li>
+					<li class="nav-link"><a href="/pages/about.html">About</a></li>
+					<li class="nav-link"><a href="">Apply</a></li>
+				</div>
+			</ul>
+			<div class="burger-menu-container">
+				<div class="burger-menu" id="burger">
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
+					<span class="burger-line"></span>
+				</div>
+			</div>
+		</header>
+		<main class="content">
+			<section class="application-container">
+				<div class="left-container">
+					<h1 class="apply-title">Join the family</h1>
+					<p class="welcome-message">
+						Please fill in the form to join the family.
+					</p>
+				</div>
+				<div class="form-container">
+					<form>
+						<div class="form-group">
+							<label for="fname">First name</label>
+							<input type="text" id="fname" name="fname" required />
+						</div>
+						<div class="form-group">
+							<label for="lname">Last name</label>
+							<input type="text" id="lname" name="lname" required />
+						</div>
+						<div class="form-group">
+							<label for="email">Email Address</label>
+							<input type="email" id="email" name="email" required />
+						</div>
+						<div class="form-group">
+							<label for="phone">Telephone Number</label>
+							<input type="tel" id="phone" name="phone" required />
+						</div>
+						<div class="form-group">
+							<label for="position">Position</label>
+							<select name="position" id="position">
+								<option value="empty"></option>
+								<option value="getaway-driver">Getaway Driver</option>
+								<option value="co-leader">Co-Leader</option>
+								<option value="shooter">Shooter</option>
+								<option value="decoy">Decoy</option>
+								<option value="fighter">Fighter</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="start-date">Available start date</label>
+							<input type="date" id="start-date" name="start-date" required />
+						</div>
+						<div class="form-group">
+							<label for="information">Additional information</label>
+							<textarea
+								name="information"
+								id="information"
+								cols="10"
+								rows="5"
+							></textarea>
+						</div>
+						<div class="form-group">
+							<label for="cv-upload" id="custom-upload">
+								<span role="button" aria-controls="cv-upload" tabindex="0">
+									<i class="fas fa-upload"></i> Upload your resume
+								</span>
+							</label>
+							<input type="file" id="cv-upload" name="cv-upload" />
+						</div>
+						<input type="submit" value="Submit" />
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer>
+			&copy; 2022 by Tanwa Sripan.
+			<p>
+				This product uses the TMDB API but is not endorsed or certified by TMDB.
+				&nbsp;
+				<img src="/assets/img/tmdb.svg" height="12px" alt="" />
+			</p>
+		</footer>
+		<script src="../config.js"></script>
+		<script src="../index.js"></script>
+	</body>
+</html>

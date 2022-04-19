@@ -80,7 +80,7 @@ header {
     margin: 2em 0;
 }
 
-@media screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
     .team-members-container {
         flex-direction: row;
         flex-wrap: wrap;

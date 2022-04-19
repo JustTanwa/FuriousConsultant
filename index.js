@@ -78,6 +78,10 @@ let baseURL = 'https://api.themoviedb.org/3';
 let url = baseURL + '/search/movie?api_key=' + APIKEY + '&query=Fast Furious 6';
 let movieId, teamMembers;
 
+
+function handleError(err) {
+	console.log(`This is the error: ${err}`);
+}
 async function getMovieId(url) {
 	const response = await fetch(url);
 	const data = await response.json();
@@ -86,7 +90,7 @@ async function getMovieId(url) {
 }
 
 async function createTeam() {
-	const movieId = await getMovieId(url);
+	const movieId = await getMovieId(url).catch(handleError);
 	const response = await fetch(
 		baseURL + '/movie/' + movieId + '/credits?api_key=' + APIKEY
 	);
@@ -201,3 +205,7 @@ if (headshot) {
 }
 
 document.addEventListener('DOMContentLoaded', createTeam);
+
+// join us buttons
+
+

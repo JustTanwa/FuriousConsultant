@@ -1,0 +1,60 @@
+.application-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container {
+    flex: 0 0 30vh;
+    padding: 0 3em;
+    outline: #000 1px solid;
+}
+
+.apply-title {
+    padding: 2em 0; 
+}
+
+.form-container {
+    padding: 0 3em;
+    margin: 2em 0;
+}
+
+.form-container form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.form-group label {
+    margin-bottom: 0.5em;
+}
+
+.form-container select, 
+form input, #custom-upload {
+    height: 2.5rem;
+}
+
+.form-group select {
+    background-color: #fff;
+}
+
+.form-group input[type=file] {
+    display: none;
+}
+
+#custom-upload, .form-container input[type=submit] {
+    background: #6B778D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9999px;
+    cursor: pointer;
+    outline: none;
+    font-size: 1em;
+}
