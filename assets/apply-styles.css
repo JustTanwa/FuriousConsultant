@@ -108,7 +108,7 @@ form input, #custom-upload {
         padding: 0 0.5em;
     }
 
-    .form-group:nth-child(7) {
+    .form-group:nth-child(8) {
         flex-basis: 100%;
         max-width: 100%;
     }
