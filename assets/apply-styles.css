@@ -68,7 +68,6 @@
 .form-container select, 
 form input, #custom-upload {
     height: 40px;
-    width: 100%;
 }
 
 .form-group select {
