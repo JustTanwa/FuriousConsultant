@@ -103,7 +103,7 @@ async function createTeam() {
 
 	teamMembers = casts.map((cast) => ({
 		fullName: cast.character,
-		imageURL: 'https://image.tmdb.org/t/p/original/' + cast.profile_path,
+		imageURL: 'https://image.tmdb.org/t/p/w185/' + cast.profile_path,
 		firstName: cast.character.split(' ')[0],
 	}));
 
