@@ -60,6 +60,7 @@ header {
     align-self: stretch;
     font-family: 'Libre Baskerville', serif;
     position: relative;
+    cursor: pointer;
 }
 
 .logo span {
@@ -223,17 +224,24 @@ header {
     height: 3em;
     border-radius: 500px;
     background: #fff;
-    outline: 2px solid #fff;
+    border: 1px solid #222;
     color: #000;
     font-weight: bold;
     margin-right: 2em;
     transition: 0.5s ease-in-out;
 }
 
+a.cta-btn {
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .cta-btn:hover {
     background: #222;
     color: white;
-    outline: #000 1px solid;
 }
 
 @media only screen and (min-width: 1000px) {
