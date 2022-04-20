@@ -55,7 +55,8 @@
 					</p>
 				</div>
 				<div class="form-container">
-					<form enctype="multipart/form-data">
+					<form enctype="multipart/form-data" name="application" method="POST" data-netlify="true">
+						<input type="hidden" name="form-name" value="application">
 						<div class="form-group">
 							<label for="fname">First name</label>
 							<input type="text" id="fname" name="fname" required />
