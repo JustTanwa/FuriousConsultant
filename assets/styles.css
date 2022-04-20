@@ -79,9 +79,10 @@ header {
 }
 
 .logo span:nth-child(3) {
-    left: calc(100% - 50px);
+    left: 120px;
     top: 45%;
     font-size: 12px;
+    width: 10ch;
 }
 
 .nav-links-container {
