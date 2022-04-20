@@ -1,6 +1,5 @@
 // logo
 const logo = document.querySelector('.logo');
-console.log(logo);
 logo.addEventListener('click', () => {
 	location.href = '/';
 });
