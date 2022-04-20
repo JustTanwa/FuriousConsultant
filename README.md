@@ -1,4 +1,4 @@
-# Furious Consultant
+# Furious Consulting
 
 This is a small project website for me to learn about creating landing page and web site layout. I will be using the a fictional company and characters from the Fast and Furious movie franchise.
 

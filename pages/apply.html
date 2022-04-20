@@ -23,12 +23,14 @@
 	</head>
 	<body>
 		<header>
-			<div class="logo">Logo</div>
+			<div class="logo">
+				<span>Furious</span><span>Consulting</span><span>Est. 2001</span>
+			</div>
 			<ul class="nav-links-container">
 				<div class="link-wrapper">
 					<li class="nav-link"><a href="/">HOME</a></li>
 					<li class="nav-link"><a href="/pages/about.html">About</a></li>
-					<li class="nav-link"><a href="">Apply</a></li>
+					<li class="nav-link"><a href="/pages/apply.html">Apply</a></li>
 				</div>
 			</ul>
 			<div class="burger-menu-container">
@@ -48,7 +50,7 @@
 					</p>
 				</div>
 				<div class="form-container">
-					<form>
+					<form enctype="multipart/form-data">
 						<div class="form-group">
 							<label for="fname">First name</label>
 							<input type="text" id="fname" name="fname" required />
@@ -63,7 +65,13 @@
 						</div>
 						<div class="form-group">
 							<label for="phone">Telephone Number</label>
-							<input type="tel" id="phone" name="phone" required />
+							<input
+								type="tel"
+								pattern="[0-9]{8,11}"
+								id="phone"
+								name="phone"
+								required
+							/>
 						</div>
 						<div class="form-group">
 							<label for="position">Position</label>
@@ -74,6 +82,7 @@
 								<option value="shooter">Shooter</option>
 								<option value="decoy">Decoy</option>
 								<option value="fighter">Fighter</option>
+								<option value="undercover">Undercover Agent</option>
 							</select>
 						</div>
 						<div class="form-group">

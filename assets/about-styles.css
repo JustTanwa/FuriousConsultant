@@ -12,11 +12,7 @@ header {
 .page-title {
     padding: 2em 1em 2em 1em;
     width: 100%;
-}
-
-.page-title p {
-    font-weight: 300;
-    padding-top: 1em;
+    text-align: center;
 }
 
 
@@ -69,7 +65,7 @@ header {
     width: 100%;
     padding: 0.8em 1em;
     font-size: 0.8em;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .team-member-card span {

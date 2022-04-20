@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
 
 * {
     box-sizing: border-box;
@@ -13,7 +13,7 @@
 
 body {
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     overflow-x: hidden;
 }
@@ -55,13 +55,37 @@ header {
 }
 
 .logo {
-    padding-left: 5em;
-    flex-basis: 20%;
+    margin-left: 40px;
+    width: 180px;
+    align-self: stretch;
+    font-family: 'Libre Baskerville', serif;
+    position: relative;
+}
+
+.logo span {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+}
+
+.logo span:nth-child(1) {
+    top: 40%;
+}
+.logo span:nth-child(2) {
+    top: 60%;
+}
+
+.logo span:nth-child(3) {
+    left: calc(100% - 50px);
+    top: 45%;
+    font-size: 12px;
 }
 
 .nav-links-container {
     display: none;
-    width:100vw;
+    width:100%;
     height: 100vh;
     background-color: #222;
     position: fixed;
@@ -221,7 +245,6 @@ header {
         display: flex;
         position: static;
         flex-basis: 80%;
-        padding-right: 5em;
         width: auto;
         height: auto;
         background: transparent;
@@ -296,7 +319,7 @@ header {
 
     }
     .intro-name {
-        left: 90%;
+        left: 80%;
         font-size: 2em;
     }
 
@@ -457,7 +480,7 @@ header {
     padding-bottom: 50%;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 16px -12px 10px rgba(22, 80, 236, 0.5);
+    box-shadow: 16px -12px 10px rgba(0, 0, 0, 0.5);
     margin-top: 10px;
     /* background-image: url(/assets/img/woman.png); */
     background-position: center;

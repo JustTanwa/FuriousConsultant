@@ -78,7 +78,6 @@ let baseURL = 'https://api.themoviedb.org/3';
 let url = baseURL + '/search/movie?api_key=' + APIKEY + '&query=Fast Furious 6';
 let movieId, teamMembers;
 
-
 function handleError(err) {
 	console.log(`This is the error: ${err}`);
 }
@@ -135,22 +134,22 @@ async function createTeam() {
 			Dominic: {
 				title: 'Team Leader',
 				description:
-					'Dominic is a superb racer, strong mentality, merciful fighter and the brains behind the plans.',
+					'Dominic is a superb racer with a strong mentality. A merciful fighter and the brains behind the plans.',
 			},
 			Mia: {
 				title: 'Team HR',
 				description:
-					'Mia is takes care of the whole crew, providing moral support.',
+					'Mia is a core part of the family. She is heading the HR team and provide support moral support to those on the ground.',
 			},
 			Brian: {
 				title: 'Co-Leader',
 				description:
-					'As an ex-cop Brian has the knowledge about law enforcement and this allow for good heist plans.',
+					'As an ex-cop, Brian is our liasion working with law enforcement to ensure that we stay on the right side of the law.',
 			},
 			Luke: {
 				title: 'Juggernaut',
 				description:
-					'Luke is an FBI agent who provides support for the Crew. He is a great leader with great combat experience and a value asset to the Crew.',
+					'Luke is an FBI agent who provides support for the Crew. He is a great leader with great combat experience and a valued asset to the Crew.',
 			},
 			Leticia: {
 				title: 'Co-Leader',
@@ -170,7 +169,7 @@ async function createTeam() {
 			Roman: {
 				title: 'Wildcard',
 				description:
-					'Roman always provide laughter to the team, a jack of all trade who is wonderful with words.',
+					'Roman always provides laughter to the team, a jack of all trades who is wonderful with words.',
 			},
 		};
 		teamMembers.forEach((member) =>
@@ -206,6 +205,23 @@ if (headshot) {
 
 document.addEventListener('DOMContentLoaded', createTeam);
 
-// join us buttons
+// cv button
 
+$('#custom-upload span[role=button]').bind('keypress keyup', function (e) {
+	if (e.which === 32 || e.which === 13) {
+		e.preventDefault();
+		$('#cv-upload').click();
+	}
+});
 
+// date minimum
+const today = new Date();
+function formatDate(date) {
+	const year = date.getFullYear();
+	let month = date.getMonth() + 1;
+	month < 10 ? (month = '0' + month) : month;
+	let day = date.getDate();
+	day < 10 ? (day = '0' + day) : day;
+	return `${year}-${month}-${day}`;
+}
+$('input[type=date]').attr('min', formatDate(today));
